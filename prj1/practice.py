@@ -15,8 +15,13 @@
 
 # print("Your name is: " + name);
 # print("Your age is: " + age);
-input = input("Enter a number: ");
-number = int(input);
-if(number == 18):
-    print("You are an adult."); 
-else:    print("You are not an adult.");
+# input = input("Enter a number: ");
+# number = int(input);
+# if(number == 18):
+#     print("You are an adult."); 
+# else:    print("You are not an adult.");
+
+
+chatgpt = input("What is ChatGPT? ");
+if(chatgpt == "ChatGPT is an AI language model developed by OpenAI."):
+    print("Correct! ChatGPT is indeed an AI language model developed by OpenAI.");
