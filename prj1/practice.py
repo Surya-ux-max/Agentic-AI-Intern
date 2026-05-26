@@ -76,4 +76,13 @@
 # number = int(input("Enter a number: "));
 # print("The square of number is",square(number));
 
+def oddoreven(num):
+    if(num%2 == 0):
+        return "even"
+    else:
+        return "odd"
+
+number =int(input("Enter a number: "));
+print("The number is",oddoreven(number));
+
 
