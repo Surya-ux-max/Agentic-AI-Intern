@@ -40,3 +40,40 @@
 # print(str(heighth));
 # print(str(value));
 
+# name = input("Enter your name: ");
+# age = int(input("Enter your age: "));
+# print("Your name is: " + name + " and your age is: " + str(age));
+
+# m = int(input("Enter a number: "));
+# n = int(input("Enter another number: "));
+
+# print(m+n);
+# print(m-n);
+# print(m*n);
+# print(m/n);
+# print(m%n);
+
+
+# m = int(input("Enter a number: "));
+# if(m%2 == 0):
+#     print("The number is even.");
+# else:
+#     print("The number is odd.");
+
+
+# for i in range(1,11):
+#     print(i*5);   
+# 
+                        
+# def square(num):
+#     return num*num;
+
+# number = int(input("Enter a number: "));
+# print("The square of number is ",square(number));
+
+# def square(num):
+#     return num*num;
+# number = int(input("Enter a number: "));
+# print("The square of number is",square(number));
+
+
