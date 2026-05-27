@@ -1,0 +1,9 @@
+Python is a programming language.
+
+Machine learning uses data.
+
+Deep learning is a subset of machine learning.
+
+Artificial intelligence uses machine learning.
+
+Python is widely used in data science.
