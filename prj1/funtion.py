@@ -36,4 +36,28 @@
 # result = add(a,b);
 # print(result);   ## this will give an error because the function add is not defined yet.
 
+## multiple parameters
 
+# def student(name, age, branch):
+#     print("Name: " + name)
+#     print("Age: " + str(age))
+#     print("Branch: " + branch)
+# student("Surya", 20, "Computer Science")
+
+
+## Default Arguments
+# def student(name="Nikhil"):
+#     print("Name: " + name)
+# student()
+# student("Surya")
+
+
+## Keyword Arguments
+# def employee(name, salary):
+#     print(name, salary)
+
+# employee(salary=50000, name="Surya")
+
+def employee(name, salary):
+    print(name, salary)
+employee(salary = 50000 , name = "Surya")   ## this will give an error because we cannot assign values to variables in this way. We need to use the keyword arguments in the function definition and then call the function with the arguments.
