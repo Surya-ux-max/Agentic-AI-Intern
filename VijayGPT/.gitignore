@@ -1,12 +1,10 @@
-# ============================================================================
-# HIGH SECURITY .GITIGNORE FOR PYTHON ML/AI REPOSITORY
-# ============================================================================
+# VijayGPT - High Security .gitignore
 
 # ============================================================================
 # SECURITY CRITICAL - NEVER COMMIT THESE FILES
 # ============================================================================
 
-# API Keys and Authentication
+# API Keys and Secrets
 *.key
 *.pem
 *.p12
@@ -29,12 +27,6 @@ token.json
 *.token
 *.secret
 *.credentials
-api_key*
-API_KEY*
-secret_key*
-SECRET_KEY*
-access_token*
-ACCESS_TOKEN*
 
 # Database Files (may contain sensitive data)
 *.db
@@ -43,8 +35,6 @@ ACCESS_TOKEN*
 *.db3
 *.s3db
 *.sl3
-*.mdb
-*.accdb
 
 # Configuration Files with Potential Secrets
 config.ini
@@ -54,33 +44,12 @@ local_settings.py
 production_settings.py
 .secrets
 .credentials
-*.conf
-*.cnf
-*.properties
-
-# Cloud Provider Credentials
-.aws/
-aws-credentials
-.azure/
-azure-credentials
-gcloud-credentials.json
-service-account.json
-.gcp/
-
-# SSH and GPG Keys
-id_rsa*
-id_dsa*
-id_ecdsa*
-id_ed25519*
-*.ppk
-*.gpg
-*.asc
 
 # ============================================================================
 # PYTHON ENVIRONMENT AND DEPENDENCIES
 # ============================================================================
 
-# Virtual Environments (ALL VARIATIONS)
+# Virtual Environment (vijay folder is a venv)
 vijay/
 venv/
 env/
@@ -89,7 +58,6 @@ ENV/
 .env/
 env.bak/
 venv.bak/
-pyvenv.cfg
 
 # Python Cache and Compiled Files
 __pycache__/
@@ -122,14 +90,6 @@ MANIFEST
 *.manifest
 *.spec
 
-# Package Managers
-pip-log.txt
-pip-delete-this-directory.txt
-Pipfile.lock
-poetry.lock
-.conda/
-conda-meta/
-
 # ============================================================================
 # AI/ML MODEL FILES AND DATA
 # ============================================================================
@@ -146,25 +106,15 @@ conda-meta/
 *.pickle
 *.joblib
 *.sav
-*.safetensors
-*.onnx
-*.tflite
-*.pb
-
-# Model Directories
 models/
 checkpoints/
 weights/
-saved_models/
-model_cache/
 
 # Training Data and Datasets
 data/
 datasets/
 training_data/
 test_data/
-raw_data/
-processed_data/
 *.csv
 *.tsv
 *.json
@@ -172,33 +122,6 @@ processed_data/
 *.parquet
 *.feather
 *.arrow
-*.xlsx
-*.xls
-*.zip
-*.tar.gz
-*.tar.bz2
-*.7z
-*.rar
-
-# Specific Dataset Files Found
-salary_dataset.csv
-arxiv.csv
-movie-dialog-corpus.zip
-movie_characters_metadata.tsv
-movie_conversations.tsv
-movie_lines.tsv
-movie_titles_metadata.tsv
-raw_script_urls.tsv
-simple_loan.csv
-
-# Vector Databases and Embeddings
-*.index
-*.faiss
-*.annoy
-*.npy
-*.npz
-nvidia_embeddings.pkl
-nvidia_faiss.index
 
 # Model Outputs and Logs
 logs/
@@ -209,33 +132,6 @@ runs/
 tensorboard_logs/
 wandb/
 mlruns/
-artifacts/
-
-# Generated Images and Media
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.tiff
-*.svg
-*.webp
-nvidia_wordcloud.png
-
-# ============================================================================
-# JUPYTER AND NOTEBOOK FILES
-# ============================================================================
-
-# Jupyter Notebook Checkpoints
-.ipynb_checkpoints/
-*/.ipynb_checkpoints/*
-
-# Jupyter Notebook Outputs (Optional - uncomment if needed)
-# *.ipynb
-
-# IPython
-profile_default/
-ipython_config.py
 
 # ============================================================================
 # DEVELOPMENT AND TESTING
@@ -254,8 +150,10 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 htmlcov/
-test_outputs/
-test_results/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
 
 # IDE and Editor Files
 .vscode/
@@ -326,26 +224,10 @@ tmp/
 temp/
 
 # ============================================================================
-# PROJECT-SPECIFIC EXCLUSIONS
+# DOCUMENTATION AND MEDIA
 # ============================================================================
 
-# VijayGPT Virtual Environment
-VijayGPT/vijay/
-
-# User Data and Conversations
-user_conversations/
-chat_history/
-user_data/
-analytics/
-feedback/
-conversation_logs/
-
-# Backup files
-backup/
-backups/
-*.backup
-
-# Large Media Files
+# Large media files
 *.mp4
 *.avi
 *.mov
@@ -358,6 +240,36 @@ backups/
 *.aac
 *.ogg
 *.wma
+
+# Large image files
+*.psd
+*.ai
+*.eps
+*.tiff
+*.tif
+*.raw
+*.cr2
+*.nef
+*.orf
+*.sr2
+
+# ============================================================================
+# PACKAGE MANAGERS AND DEPENDENCIES
+# ============================================================================
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# conda
+.conda/
+conda-meta/
 
 # ============================================================================
 # CLOUD AND DEPLOYMENT
@@ -379,6 +291,17 @@ kube-config
 .terraform/
 .terraform.lock.hcl
 
+# AWS
+.aws/
+aws-credentials
+
+# Google Cloud
+gcloud-credentials.json
+service-account.json
+
+# Azure
+.azure/
+
 # ============================================================================
 # MONITORING AND ANALYTICS
 # ============================================================================
@@ -395,6 +318,26 @@ log/
 # Error tracking
 .sentry-dsn
 sentry.properties
+
+# ============================================================================
+# CUSTOM PROJECT EXCLUSIONS
+# ============================================================================
+
+# VijayGPT specific
+user_conversations/
+chat_history/
+user_data/
+analytics/
+feedback/
+
+# Backup files
+backup/
+backups/
+*.backup
+
+# Test outputs
+test_outputs/
+test_results/
 
 # ============================================================================
 # WHITELIST EXCEPTIONS (Files to include despite patterns above)
@@ -421,60 +364,3 @@ sentry.properties
 !*.js
 !*.html
 !*.css
-
-# Include small sample datasets (uncomment if needed)
-# !sample_*.csv
-# !example_*.json
-
-# ============================================================================
-# ADDITIONAL SECURITY PATTERNS
-# ============================================================================
-
-# Passwords and sensitive strings
-*password*
-*PASSWORD*
-*secret*
-*SECRET*
-*private*
-*PRIVATE*
-*confidential*
-*CONFIDENTIAL*
-
-# Backup and temporary database files
-*.sql
-*.dump
-*.bak
-*.backup
-
-# Certificate and key files
-*.csr
-*.p7b
-*.p7r
-*.spc
-*.pfx
-
-# Environment-specific files
-.env.local
-.env.development
-.env.test
-.env.production
-.env.staging
-
-# IDE-specific files
-.vscode/settings.json
-.vscode/launch.json
-.idea/workspace.xml
-.idea/tasks.xml
-
-# OS-specific files
-.DS_Store?
-Thumbs.db?
-
-# Network and security files
-*.pcap
-*.cap
-*.dmp
-
-# ============================================================================
-# END OF HIGH SECURITY .GITIGNORE
-# ============================================================================

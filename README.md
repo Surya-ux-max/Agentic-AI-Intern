@@ -1,272 +1,52 @@
-# Python Learning & Machine Learning Repository
+# Python / ML Repository
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Machine Learning](https://img.shields.io/badge/ML-Scikit--Learn-orange.svg)](https://scikit-learn.org/)
-[![NLP](https://img.shields.io/badge/NLP-Gensim-green.svg)](https://radimrehurek.com/gensim/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-orange.svg)](https://jupyter.org/)
+A collection of Python and machine learning experiments, NLP projects, and learning notebooks.
 
-A comprehensive collection of Python learning materials, machine learning tutorials, and NLP projects designed for developers and data science enthusiasts.
+## Setup
 
-## Repository Structure
-
-```
-Python/
-├── ML - basics/                    # Machine Learning fundamentals
-│   ├── ML-intro.ipynb             # Introduction to ML concepts
-│   ├── simple-regression.ipynb    # Linear regression tutorial
-│   ├── word_embeddings.ipynb      # Word embeddings with NLP
-│   ├── nlp_with_pretrained.ipynb  # Pre-trained NLP models
-│   ├── salary_dataset.csv         # Sample dataset for ML
-│   ├── arxiv.csv                  # Research papers dataset
-│   └── movie-dialog-corpus/       # Movie dialogue dataset
-├── word2Vec_prj/                  # Word2Vec implementation
-│   ├── data/raw/                  # Training data
-│   ├── models/                    # Trained models
-│   ├── notebooks/                 # Jupyter notebooks
-│   └── README.md                  # Project documentation
-├── prj1/                          # Python practice projects
-│   ├── function.py                # Function examples
-│   └── practice.py                # Practice exercises
-├── test/                          # Experimental notebooks
-│   ├── nlp.ipynb                 # NLP experiments
-│   └── test.ipynb                 # General testing
-└── Sentence_embedding.ipynb       # Sentence embedding tutorial
-```
-
-## Quick Start
-
-### Prerequisites
-
-- Python 3.11 or higher
-- Jupyter Notebook or JupyterLab
-- Git (for cloning)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd Python
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   
-   Or install individual packages:
-   ```bash
-   pip install numpy pandas scikit-learn matplotlib seaborn plotly tensorflow gensim nltk
-   ```
-
-3. **Launch Jupyter Notebook**
-   ```bash
-   jupyter notebook
-   ```
-
-## Learning Paths
-
-### Beginner Path
-1. Start with `prj1/` for Python basics
-2. Explore `ML - basics/ML-intro.ipynb` for ML concepts
-3. Try `ML - basics/simple-regression.ipynb` for your first model
-
-### Intermediate Path
-1. Dive into `word2Vec_prj/` for NLP fundamentals
-2. Experiment with `ML - basics/word_embeddings.ipynb`
-3. Explore `Sentence_embedding.ipynb`
-
-### Advanced Path
-1. Work with `ML - basics/nlp_with_pretrained.ipynb`
-2. Analyze datasets in `movie-dialog-corpus/`
-3. Create your own projects in `test/`
-
-## Machine Learning Basics
-
-### Core Concepts Covered
-- **Regression**: Predicting continuous values
-- **Classification**: Categorizing data points
-- **Clustering**: Grouping similar data
-
-### Algorithms Implemented
-- Linear Regression
-- Word2Vec
-- Pre-trained NLP models
-- Sentence embeddings
-
-### Datasets Available
-- Salary prediction dataset
-- ArXiv research papers
-- Movie dialogue corpus
-- Custom text samples
-
-## Natural Language Processing
-
-### Word2Vec Project Features
-- Text preprocessing and tokenization
-- Word vector training
-- Similarity analysis
-- Model persistence
-- Vocabulary analysis
-
-### NLP Techniques
-- Word embeddings
-- Sentence embeddings
-- Pre-trained model integration
-- Text similarity analysis
-
-## Visualization & Analysis
-
-### Libraries Used
-- **Matplotlib**: Basic plotting
-- **Seaborn**: Statistical visualizations
-- **Plotly**: Interactive charts
-- **Pandas**: Data manipulation
-- **NumPy**: Numerical computing
-
-## Development Environment
-
-### Recommended Setup
-```python
-# Core ML stack
-import numpy as np
-import pandas as pd
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# NLP stack
-from gensim.models import Word2Vec
-import nltk
-
-# Deep learning (optional)
-import tensorflow as tf
-```
-
-## Project Highlights
-
-### Word2Vec Implementation
-- Complete pipeline from text to embeddings
-- 100-dimensional word vectors
-- Vocabulary size: 18 unique words
-- Similarity analysis capabilities
-
-### Linear Regression Tutorial
-- Step-by-step implementation
-- Data visualization
-- Model evaluation
-- Best practices
-
-### Movie Dialogue Analysis
-- Large-scale text corpus
-- Character metadata
-- Conversation structure
-- NLP applications
-
-## Contributing
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
-
-## Best Practices
-
-### Code Quality
-- Follow PEP 8 style guidelines
-- Add docstrings to functions
-- Use meaningful variable names
-- Comment complex algorithms
-
-### Data Science Workflow
-1. **Explore** → Understand your data
-2. **Clean** → Preprocess and validate
-3. **Model** → Train and evaluate
-4. **Visualize** → Create meaningful plots
-5. **Document** → Explain your findings
-
-## Troubleshooting
-
-### Common Issues
-
-**Import Errors**
 ```bash
-pip install --upgrade pip
 pip install -r requirements.txt
+jupyter notebook
 ```
 
-**Jupyter Kernel Issues**
-```bash
-python -m ipykernel install --user --name=python3
-```
+## Projects
 
-**Memory Issues with Large Datasets**
-- Use `pd.read_csv(chunksize=1000)`
-- Implement data sampling
-- Consider cloud computing resources
+### BERT
+BERT model warmup and fine-tuning experiments using Hugging Face transformers.
 
-## Learning Resources
+### Langchain
+LangChain framework experiments — chains, prompts, and LLM integrations.
 
-### Recommended Reading
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
-- [Gensim Tutorials](https://radimrehurek.com/gensim/auto_examples/)
-- [Pandas User Guide](https://pandas.pydata.org/docs/user_guide/)
-- [Matplotlib Tutorials](https://matplotlib.org/stable/tutorials/)
+### Logistic_regression
+Logistic regression classifier with a sample dataset in `data/`.
 
-### Online Courses
-- Machine Learning by Andrew Ng
-- Deep Learning Specialization
-- Natural Language Processing with Python
+### ML - basics
+Core ML concepts with Jupyter notebooks:
+- `ML-intro.ipynb` — ML overview
+- `simple-regression.ipynb` — linear regression on salary dataset
+- `word_embeddings.ipynb` — word vectors from scratch
+- `nlp_with_pretrained.ipynb` — using pre-trained NLP models
+- Datasets: `salary_dataset.csv`, `arxiv.csv`, `movie-dialog-corpus/`
 
-## Performance Metrics
+### NLP
+Notebook covering GloVe, BERT, TF-IDF, and LSTM with explanations.
 
-### Model Evaluation
-- **Regression**: MSE, RMSE, R²
-- **Classification**: Accuracy, Precision, Recall, F1
-- **NLP**: Cosine similarity, Word analogies
+### RAG
+Retrieval-Augmented Generation pipeline notebook using LangChain and vector search.
 
-## Features
+### sentence_embedding
+Sentence-level embeddings using pre-trained transformer models.
 
-- Complete ML pipeline examples
-- Interactive Jupyter notebooks
-- Real-world datasets
-- Comprehensive documentation
-- Visualization examples
-- NLP implementations
-- Best practices guide
-- Troubleshooting section
+### VijayGPT
+Interactive terminal Q&A app using semantic search with sentence transformers.
+See `VijayGPT/README.md` for setup and usage.
 
-## License
+### word2Vec_prj
+Word2Vec training pipeline — data preprocessing, model training, similarity analysis.
+See `word2Vec_prj/README.md` for details.
 
-This project is open source and available under the [MIT License](LICENSE).
+### prj1
+Basic Python practice scripts — functions and exercises.
 
-## Community
-
-- **Issues**: Report bugs or request features
-- **Discussions**: Share ideas and ask questions
-- **Wiki**: Additional documentation and tutorials
-
-## Future Roadmap
-
-- [ ] Deep learning tutorials
-- [ ] Computer vision projects
-- [ ] Advanced NLP techniques
-- [ ] MLOps integration
-- [ ] Cloud deployment guides
-- [ ] Interactive web applications
-
----
-
-**Happy Learning!**
-
-*Built with love for the Python and ML community*
+### test
+Scratch notebooks for quick experiments.
