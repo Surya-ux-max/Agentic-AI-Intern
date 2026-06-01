@@ -332,6 +332,25 @@ temp/
 # VijayGPT Virtual Environment
 VijayGPT/vijay/
 
+# RAG_Openai Security - CRITICAL
+RAG_Openai/*.env
+RAG_Openai/config.py
+RAG_Openai/secrets.py
+RAG_Openai/api_keys.py
+RAG_Openai/credentials.json
+RAG_Openai/.openai_key
+RAG_Openai/openai_api_key*
+RAG_Openai/OPENAI_API_KEY*
+RAG_Openai/your_openai_api_key_here*
+RAG_Openai/bhagavad-gita*.pdf
+RAG_Openai/chroma_db/
+RAG_Openai/vector_store/
+RAG_Openai/embeddings/
+RAG_Openai/*.pkl
+RAG_Openai/*.index
+RAG_Openai/outputs/
+RAG_Openai/logs/
+
 # User Data and Conversations
 user_conversations/
 chat_history/

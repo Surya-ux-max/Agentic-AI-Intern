@@ -34,6 +34,9 @@ Notebook covering GloVe, BERT, TF-IDF, and LSTM with explanations.
 ### RAG
 Retrieval-Augmented Generation pipeline notebook using LangChain and vector search.
 
+### RAG_Openai
+Advanced RAG implementation with OpenAI integration — document processing, embeddings, and Q&A system using Bhagavad Gita text.
+
 ### sentence_embedding
 Sentence-level embeddings using pre-trained transformer models.
 
