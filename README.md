@@ -1,1 +1,261 @@
-# Python ML/AI Repository\n\nA collection of machine learning and AI projects with practical implementations.\n\n## Repository Structure\n\n```\nPython/\n├── BERT/                   # BERT model experiments\n├── Langchain/             # LangChain implementations\n├── Logistic_regression/   # Classification models\n├── ML - basics/          # ML fundamentals\n├── NLP/                  # Natural language processing\n├── RAG/                  # Basic RAG implementation\n├── RAG_Openai/          # Advanced RAG with OpenAI\n├── sentence_embedding/   # Sentence embeddings\n├── VijayGPT/            # Interactive Q&A app\n├── word2Vec_prj/        # Word2Vec pipeline\n├── prj1/                # Python basics\n└── test/                # Experiments\n```\n\n## Quick Setup\n\n```bash\n# Clone and setup\ngit clone <repository-url>\ncd Python\npython -m venv venv\nsource venv/bin/activate  # Windows: venv\\Scripts\\activate\npip install -r requirements.txt\n```\n\n## Projects Overview\n\n### BERT\nBERT model fine-tuning and experimentation using Hugging Face transformers.\n\n**Usage:**\n```bash\ncd BERT/\njupyter notebook BERT_Warmup.ipynb\n```\n\n### Langchain\nLangChain framework for building LLM applications with chains and agents.\n\n**Usage:**\n```bash\ncd Langchain/\njupyter notebook langchain.ipynb\n```\n\n### Logistic Regression\nClassification algorithms with scikit-learn on loan dataset.\n\n**Usage:**\n```bash\ncd Logistic_regression/\njupyter notebook classy.ipynb\n```\n\n### ML Basics\nCore machine learning concepts and tutorials.\n\n**Notebooks:**\n- `ML-intro.ipynb` - ML fundamentals\n- `simple-regression.ipynb` - Linear regression\n- `word_embeddings.ipynb` - Word vectors\n- `nlp_with_pretrained.ipynb` - Pre-trained models\n\n**Datasets:**\n- `salary_dataset.csv` - Salary prediction\n- `arxiv.csv` - Research papers\n- `movie-dialog-corpus/` - Movie dialogues\n\n**Usage:**\n```bash\ncd \"ML - basics\"/\njupyter notebook ML-intro.ipynb\n```\n\n### NLP\nAdvanced NLP techniques including GloVe, BERT, TF-IDF, and LSTM.\n\n**Usage:**\n```bash\ncd NLP/\njupyter notebook \"nlp-glove-bert-tf-idf-lstm-explained (1).ipynb\"\n```\n\n### RAG\nBasic Retrieval-Augmented Generation for document Q&A.\n\n**Usage:**\n```bash\ncd RAG/\njupyter notebook RAG.ipynb\n```\n\n### RAG_Openai\nProduction-ready RAG with OpenAI integration and ChromaDB.\n\n**Setup:**\n```bash\ncd RAG_Openai/\ncp .env.example .env\n# Edit .env and add your OpenAI API key\npip install python-dotenv pypdf chromadb\njupyter notebook RAG_Langchain_1405-2.ipynb\n```\n\n**Security:** Uses environment variables for API keys. See `SECURITY_WARNING.md`.\n\n### Sentence Embedding\nSentence-level embeddings using transformer models.\n\n**Usage:**\n```bash\ncd sentence_embedding/\njupyter notebook Sentence_embedding.ipynb\n```\n\n### VijayGPT\nInteractive terminal Q&A application with semantic search.\n\n**Setup:**\n```bash\ncd VijayGPT/\npython -m venv vijay\nsource vijay/bin/activate  # Windows: vijay\\Scripts\\activate\npip install -r requirements.txt\npython app.py\n```\n\n### Word2Vec Project\nComplete Word2Vec training pipeline with FAISS integration.\n\n**Structure:**\n```\nword2Vec_prj/\n├── data/raw/     # Training data\n├── models/       # Trained models\n├── notebooks/    # Jupyter notebooks\n└── outputs/      # Visualizations\n```\n\n**Usage:**\n```bash\ncd word2Vec_prj/\njupyter notebook notebooks/word2vec_training.ipynb\n```\n\n### Python Basics (prj1)\nFundamental Python programming exercises.\n\n**Usage:**\n```bash\ncd prj1/\npython practice.py\npython funtion.py\n```\n\n### Test\nExperimental notebooks for quick prototyping.\n\n**Usage:**\n```bash\ncd test/\njupyter notebook test.ipynb\n```\n\n## Development\n\n### Code Quality\n```bash\n# Format code\nblack .\n\n# Lint\nflake8 .\n\n# Tests\npytest tests/\n```\n\n### Security\n- Never commit API keys\n- Use `.env` files for secrets\n- Check `.gitignore` coverage\n- Use environment variables\n\n### Git Workflow\n```bash\n# Create feature branch\ngit checkout -b feature/new-feature\n\n# Commit changes\ngit commit -m \"feat: add new feature\"\n\n# Push and create PR\ngit push origin feature/new-feature\n```\n\n## Requirements\n\n- Python 3.8+\n- 8GB+ RAM (for ML models)\n- 2GB+ storage\n- Virtual environment support\n\n## Troubleshooting\n\n**Import errors:**\n```bash\npip install --upgrade pip\npip install -r requirements.txt --force-reinstall\n```\n\n**Jupyter issues:**\n```bash\npython -m ipykernel install --user --name=ml-env\n```\n\n**Memory issues:**\n- Use data sampling for large datasets\n- Consider cloud resources for heavy models\n\n## Contributing\n\n1. Fork the repository\n2. Create feature branch\n3. Make changes with tests\n4. Submit pull request\n\n## License\n\nMIT License - see LICENSE file for details.\n
+# Python ML & AI Repository
+
+A collection of Machine Learning, Deep Learning, NLP, and Generative AI projects built using Python.
+
+## Repository Structure
+
+```text
+Python/
+├── BERT/                  # BERT experiments and fine-tuning
+├── Langchain/             # LangChain projects
+├── Logistic_regression/   # Classification models
+├── ML-basics/             # Machine Learning fundamentals
+├── NLP/                   # Natural Language Processing
+├── RAG/                   # Retrieval-Augmented Generation
+├── RAG_OpenAI/            # RAG with OpenAI and ChromaDB
+├── sentence_embedding/    # Sentence embeddings
+├── VijayGPT/              # Semantic search Q&A application
+├── word2Vec_prj/          # Word2Vec project
+├── prj1/                  # Python fundamentals
+└── test/                  # Experimental notebooks
+```
+
+## Quick Start
+
+### Clone the Repository
+
+```bash
+git clone <repository-url>
+cd Python
+```
+
+### Create a Virtual Environment
+
+```bash
+python -m venv venv
+
+# Linux / macOS
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Project Overview
+
+### BERT
+
+Experiments with BERT models using Hugging Face Transformers.
+
+Topics:
+
+* Tokenization
+* Embeddings
+* Fine-tuning
+* Text Classification
+
+### LangChain
+
+Applications built using LangChain.
+
+Topics:
+
+* Chains
+* Prompt Templates
+* Retrieval
+* LLM Integration
+
+### Logistic Regression
+
+Classification models implemented with Scikit-learn.
+
+Topics:
+
+* Data Preprocessing
+* Feature Engineering
+* Model Training
+* Evaluation Metrics
+
+### ML Basics
+
+Fundamental Machine Learning concepts.
+
+Contents:
+
+* Introduction to ML
+* Linear Regression
+* Word Embeddings
+* Pre-trained NLP Models
+
+Datasets:
+
+* Salary Dataset
+* ArXiv Dataset
+* Movie Dialogue Corpus
+
+### NLP
+
+Natural Language Processing techniques and models.
+
+Topics:
+
+* TF-IDF
+* Word2Vec
+* GloVe
+* BERT
+* LSTM
+
+### RAG
+
+Basic Retrieval-Augmented Generation pipeline.
+
+Topics:
+
+* Document Loading
+* Text Chunking
+* Embeddings
+* Retrieval
+* Question Answering
+
+### RAG_OpenAI
+
+Advanced RAG implementation using:
+
+* LangChain
+* ChromaDB
+* OpenAI Models
+
+Features:
+
+* Vector Search
+* Document Retrieval
+* Conversational QA
+
+### Sentence Embeddings
+
+Sentence-level vector representations using Transformer models.
+
+### VijayGPT
+
+Interactive Question-Answering application with semantic search capabilities.
+
+Features:
+
+* Document Search
+* Embedding-Based Retrieval
+* Interactive CLI Interface
+
+### Word2Vec Project
+
+Project Structure:
+
+```text
+word2Vec_prj/
+├── data/
+├── models/
+├── notebooks/
+└── outputs/
+```
+
+Features:
+
+* Custom Word2Vec Training
+* Embedding Visualization
+* Similarity Search
+* FAISS Integration
+
+### Python Fundamentals (prj1)
+
+Practice programs covering:
+
+* Variables
+* Functions
+* Loops
+* OOP Concepts
+* Problem Solving
+
+### Test
+
+Sandbox area for experimentation and prototyping.
+
+---
+
+## Technologies Used
+
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Scikit-learn
+* Transformers
+* LangChain
+* ChromaDB
+* FAISS
+* PyTorch
+* Jupyter Notebook
+
+---
+
+## Security Best Practices
+
+* Never commit API keys
+* Store secrets in `.env` files
+* Use environment variables
+* Verify `.gitignore` before pushing
+
+---
+
+## System Requirements
+
+* Python 3.8+
+* 8 GB RAM (recommended)
+* 2 GB free storage
+* Jupyter Notebook
+
+---
+
+## Common Issues
+
+### Dependency Problems
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt --force-reinstall
+```
+
+### Jupyter Kernel Issues
+
+```bash
+python -m ipykernel install --user --name ml-env
+```
+
+### Memory Constraints
+
+* Use smaller datasets
+* Process data in batches
+* Consider cloud resources for large models
+
+---
+
+## Future Additions
+
+* Fine-Tuning LLMs
+* RAG with Local Models
+* Agentic AI Workflows
+* Vector Databases
+* Multi-Agent Systems
+* AI-Powered Applications
+
+---
+
+## License
+
+This project is licensed under the MIT License.
